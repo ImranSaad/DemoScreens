@@ -19,10 +19,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Screen2(modifier: Modifier = Modifier) {
+fun Screen2(navController: NavHostController ,modifier: Modifier = Modifier) {
     Surface(modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background)
     {
@@ -52,7 +54,7 @@ fun Screen2(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(20.dp))
 
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate(Destination.Conversation.route) },
                 shape = CircleShape,
             )
             {

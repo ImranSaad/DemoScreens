@@ -20,10 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Screen1(name: String, modifier: Modifier = Modifier) {
+fun Screen1(navController: NavHostController) {
     Surface(modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background)
     {
@@ -45,7 +48,7 @@ fun Screen1(name: String, modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(25.dp))
 
             Text(
-                text = name,
+                text = "imran",
                 modifier = Modifier.padding(bottom = 8.dp),
                 style = MaterialTheme.typography.bodyMedium,
                 fontSize = 35.sp
@@ -54,7 +57,7 @@ fun Screen1(name: String, modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(20.dp))
 
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate(Destination.Screen2.route) },
                 shape = CircleShape,
             )
             {
