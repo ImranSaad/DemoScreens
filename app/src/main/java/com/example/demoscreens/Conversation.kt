@@ -10,7 +10,7 @@ import androidx.navigation.NavHostController
 fun Conversation(navController: NavHostController,listOfProfile: List<Profiles>){
     LazyColumn{
         items(listOfProfile) { profile ->
-          Screen3(profile = profile, navController = NavHostController(navController.context))
+          Screen3(profile = profile, navController = navController)
         }
     }
 }

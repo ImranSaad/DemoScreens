@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
@@ -70,9 +71,5 @@ class MainActivity : ComponentActivity() {
 }
 
 val listOfProfiles = listOf(
-    Profiles("imran1","imrankhan.sikar021@gmail.com"),
-    Profiles("imran2","khan2"),
-    Profiles("imran3","khan3"),
-    Profiles("imran4","khan4"),
-    Profiles("imran5","khan5")
+    Profiles("imran1","imrankhan.sikar021@gmail.com", R.drawable.chatimage )
 )
